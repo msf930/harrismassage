@@ -1,0 +1,115 @@
+.aboutCont{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: var(--tan);
+    z-index: 1;
+}
+.aboutInnerCont{
+    position: relative;
+    width: calc(100vw - 120px);
+    height: auto;
+    background-color: var(--dark-tan);
+    display: flex;
+    flex-direction: column;
+    margin: 60px;
+    z-index: 1;
+}
+.aboutTitle{
+    font-size: 42px;
+    font-family: var(--title);
+    color: var(--dark-green);
+}
+.aboutTitleCont{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.aboutBackgroundCont{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.aboutBackgroundImageCont{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-90%);
+    height: auto;
+    z-index: 100;
+}
+.aboutBackgroundImageContInner{
+    position: relative;
+    width: 40vw;
+    height: 50vh;
+}
+.aboutBackgroundTextCont{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    max-width: 700px;
+    transform: translateX(50%);
+    width: 50%;
+    height: auto;
+    background-color: var(--green);
+    padding: 50px 50px 50px 130px;
+    z-index: 99;
+}
+.aboutBackgroundText{
+    font-size: 18px;
+    font-family: var(--body);
+    color: var(--dark-green);
+}
+.aboutApproachCont{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.aboutApproachImageCont{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-10%);
+    height: auto;
+    z-index: 110;
+}
+.aboutApproachImageContInner{
+    position: relative;
+    width: 40vw;
+    height: 40vh;
+}
+.aboutApproachTextCont{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 50%;
+    max-width: 700px;
+    height: auto;
+    background-color: var(--green);
+    padding: 50px 140px 50px 50px;
+    z-index: 99;
+}
+.aboutApproachText{
+    font-size: 18px;
+    font-family: var(--body);
+    color: var(--dark-green);
+}

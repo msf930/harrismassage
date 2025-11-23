@@ -1,26 +1,180 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --tan: #FFF7EA;
+  --dark-tan: #F7E5D2;
+  --green: #CFD6CD;
+  --dark-green: #415A41;
+  background-color: #FFF7EA;
+  
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.homeCont{
+  width: 100%;
+  height: 100%;
+  background-color: var(--tan);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.heroSpacer{
+  position: relative;
+  height: calc(350px - 100px);
+  width: 100%;
+  background-color: var(--green);
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.heroContFloat{
+  position: absolute;
+  width: calc(100% - 60px);
+  height: auto;
+  top: 175px;
+  left: 60px;
+}
+.heroCont{
+  position: relative;
+  width: calc(100vw - 120px);
+  height: calc((100vw - 120px)/2);
+  display: flex;
+}
+.heroText{
+  position: absolute;
+  width: calc(100vw - 120px);
+  height: calc((100vw - 120px)/2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 100;
+}
+.heroTextTitleCont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heroTextTitle{
+  font-size: 42px;
+  font-family: var(--title);
+  color: var(--dark-green);
+}
+.heroTextSub{
+  font-size: 32px;
+  font-family: var(--body);
+  color: var(--dark-green);
+}
+.homeHeroBtn{
+  position: relative;
+  font-size: 20px;
+  font-family: var(--body);
+  background-color: var(--dark-green);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 60px;
+  z-index: 110;
+}
+.homeSecondCont{
+  position: absolute;
+  top: calc(((100vw - 120px)/2) + 175px + 80px);
+}
+.homeConditionsCont{
+  position: relative;
+  width: calc(100vw - 120px);
+  height: 100%;
+  margin-left: 60px;
+  background-color: var(--green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.homeConditionsTitle{
+  font-size: 42px;
+  font-family: var(--title);
+  color: var(--dark-green);
+}
+.homeConditionsList{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 20px;
+}
+.homeConditionsItem{
+  position: relative;
+  width: 380px;
+  flex-shrink: 0;
+  height: auto;
+  background-color: var(--green);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 20px;
+}
+.homeConditionsItemTitle{
+  font-size: 36px;
+  font-family: var(--title);
+  color: var(--dark-green);
+}
+.homeConditionsItemDescription{
+  font-size: 20px;
+  font-family: var(--body);
+  color: var(--dark-green);
+}
+.homeTestimonailsCont{
+  position: relative;
+  width: calc(100vw - 120px);
+  height: 100%;
+  margin-left: 60px;
+  background-color: var(--tan);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.homeTestimonailsTitle{
+  font-size: 42px;
+  font-family: var(--title);
+  color: var(--dark-green);
+}
+.homeTestimonailsList{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.homeTestimonailsItem{
+  position: relative;
+  width: 420px;
+  height: auto;
+  background-color: var(--tan);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 20px;
+}
+.homeTestimonailsItemDescription{
+  font-size: 20px;
+  font-family: var(--body);
+  color: var(--dark-green);
+}
+.homeTestimonailsItemAuthor{
+  font-size: 20px;
+  font-family: var(--body);
+  color: var(--dark-green);
 }

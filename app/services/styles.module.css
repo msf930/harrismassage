@@ -1,0 +1,49 @@
+.servicesCont{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: var(--tan);
+    z-index: 1;
+}
+.servicesInnerCont{
+    position: relative;
+    width: calc(100vw - 120px);
+    height: auto;
+    background-color: var(--dark-tan);
+    display: flex;
+    flex-direction: column;
+    margin: 60px;
+    z-index: 1;
+}
+.servicesTitle{
+    font-size: 42px;
+    font-family: var(--title);
+    color: var(--dark-green);
+}
+.servicesTitleCont{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.servicesDescriptionCont{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.servicesDescription{
+    font-size: 18px;
+    font-family: var(--body);
+    color: var(--dark-green);
+    text-align: center;
+    max-width: 700px;
+}

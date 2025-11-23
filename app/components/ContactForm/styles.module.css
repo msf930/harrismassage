@@ -1,0 +1,142 @@
+.contactFormCont {
+    position: relative;
+    width: calc(100vw - 120px);
+    height: 100%;
+    margin-left: 60px;
+    background-color: var(--dark-tan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.contactFormInner{
+    position: relative;
+    width: calc(100vw - 120px - 240px);
+    height: 100%;
+    margin-left: 0px;
+    margin-top: 120;
+    padding-top: 200px;
+    background-color: var(--tan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.titleCont{
+    position: absolute;
+    top: calc(60px + (155px/2)) ;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100vw - 120px - 240px - 120px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green);
+    text-align: center;
+    font-size: 36px;
+    font-family: var(--title);
+    color: var(--dark-green);
+    z-index: 150;
+}
+.contactFormForm{
+    margin-top: 100px;
+    max-width: 680px;
+    height: auto;
+    color: var(--dark-green);
+    font-size: 20px;
+    font-family: var(--body);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.contactFormFormInfo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.contactFormFormInfoItem{
+    font-size: 20px;
+    font-family: var(--body);
+    color: var(--dark-green);
+}
+.nameSection{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+}
+.nameCont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.formInput{
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: var(--body);
+    color: var(--dark-green);
+    background-color: transparent;
+    
+}
+.formInput{
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: var(--body);
+    color: var(--dark-green);
+    background-color: transparent;
+    
+}
+.formInputArea{
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: var(--body);
+    color: var(--dark-green);
+    background-color: transparent;
+    
+}
+.contactFormFormBtnCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.contactFormFormBtn{
+    position: relative;
+  font-size: 20px;
+  font-family: var(--body);
+  background-color: var(--dark-green);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 60px;
+  z-index: 110;
+}
+.hCaptchaCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}

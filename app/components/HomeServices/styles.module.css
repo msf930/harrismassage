@@ -1,0 +1,195 @@
+.servicesCont{
+    height: 600px;
+    width: calc(100vw - 120px);
+    margin-left: 60px;
+    background-color: var(--dark-tan);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.carouselWrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.carouselTrack{
+    position: relative;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carouselSegment{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Segments positioned to the right (next items) */
+.carouselSegment.segmentNext{
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* Segments positioned to the left (previous items) */
+.carouselSegment.segmentPrev{
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+/* Active segment entering from right (next direction) */
+.carouselSegment.activeFromRight{
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 10;
+}
+
+/* Active segment entering from left (prev direction) */
+.carouselSegment.activeFromLeft{
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 10;
+}
+
+/* Exit animation: slide left (when moving to next) */
+.carouselSegment.exitLeft{
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 5;
+}
+
+/* Exit animation: slide right (when moving to prev) */
+.carouselSegment.exitRight{
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 5;
+}
+
+.segmentContent{
+    text-align: center;
+    padding: 40px;
+    max-width: 600px;
+}
+
+.segmentTitle{
+    font-size: 48px;
+    font-family: var(--title);
+    color: var(--dark-green);
+    margin-bottom: 20px;
+}
+
+.segmentDescription{
+    font-size: 24px;
+    font-family: var(--body);
+    color: var(--dark-green);
+    line-height: 1.6;
+}
+
+.navButton{
+    background-color: var(--dark-green);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 20;
+}
+
+.navButton:hover{
+    background-color: var(--green);
+    transform: scale(1.1);
+}
+
+.navButton:active{
+    transform: scale(0.95);
+}
+
+.indicators{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+}
+
+.indicator{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--dark-green);
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.indicator:hover{
+    transform: scale(1.2);
+}
+
+.indicatorActive{
+    background-color: var(--dark-green);
+}
+
+.segmentTextCont{
+    position: absolute;
+    top: 50%;
+    /* left: 30%; */
+    transform: translate(-50%, -50%);
+    background-color: var(--green);
+    width: 380px;
+    height: 286px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 110;
+}
+.segmentTitle{
+    font-size: 36px;
+    font-family: var(--body);
+    color: var(--dark-green);
+}
+.homeServiceBtn{
+    position: absolute;
+    top: calc(50% + (286px / 2) - 10px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: var(--body);
+    background-color: var(--dark-green);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    z-index: 110;
+  }
+  .segmentImageCont{
+    position: absolute;
+    top: 50%;
+    /* left: 60%; */
+    transform: translate(-50%, -50%);
+    width: 693px;
+    height: 462px;
+  }
