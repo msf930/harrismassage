@@ -47,3 +47,114 @@
     text-align: center;
     max-width: 700px;
 }
+.servicesServicesCont{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.servicesServiceItemEven{
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.servicesServiceItemOdd{
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr ;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    direction: rtl;
+}
+.servicesServiceItemOdd > * {
+    direction: ltr;
+}
+.servicesServiceImageCont{
+    position: relative;
+    width: 100%;
+    height: calc(((100vw - 120px) * 0.8)/2);
+}
+.servicesServiceInfoCont{
+    position: relative;
+    width: calc(((100vw - 120px) * 0.8)/2);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.servicesServiceTitleCont{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.servicesServiceTitle{
+    font-size: 32px;
+    font-family: var(--title);
+    color: var(--dark-green);
+    font-weight: 600;
+}
+.servicesServiceDescriptionCont{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.servicesServiceDescription{
+    font-size: 18px;
+    font-family: var(--body);
+    color: var(--dark-green);
+    line-height: 1.6;
+}
+.servicesServicePriceCont{
+    position: relative;
+    width: calc(((100vw - 120px) * 0.8)/2);
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.servicesServicePrice{
+    font-size: 16px;
+    font-family: var(--body);
+    color: var(--dark-green);
+}
+.servicesServicePriceDuration{
+    font-size: 16px;
+    font-family: var(--body);
+    color: var(--dark-green);
+}
+.servicesServicePriceBtn{
+    position: relative;
+    font-size: 16px;
+    font-family: var(--body);
+    background-color: var(--green);
+    color: var(--dark-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 128px;
+    height: 52px;
+    z-index: 110;
+  }
+  .servicesServicePriceBtn:hover{
+    background-color: var(--dark-green);
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }

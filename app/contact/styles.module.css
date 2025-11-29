@@ -1,0 +1,7 @@
+.contactCont{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: var(--tan);
+    z-index: 1;
+}

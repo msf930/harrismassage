@@ -31,6 +31,7 @@
   width: calc(100vw - 120px);
   height: calc((100vw - 120px)/2);
   display: flex;
+  overflow: hidden;
 }
 .heroText{
   position: absolute;

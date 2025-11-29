@@ -1,11 +1,28 @@
+"use client";
 import Image from "next/image";
-import Nav from "../app/components/Nav";
-import HomeServices from "../app/components/HomeServices";
+import Nav from "./components/Nav";
+import HomeServices from "./components/HomeServices";
 import Link from "next/link";
-import ContactForm from "../app/components/ContactForm";
-import Footer from "../app/components/Footer";
+import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
+import { useState, useEffect } from "react";
+import { type SanityDocument } from "next-sanity";
+import { client } from "../sanity/lib/client";
 
-export default function Home() {
+export default async function Home() {
+
+  const [homePageData, setHomePageData] = useState(null);
+
+  useEffect(() => {
+    client.fetch(`*[_type == "homePage"]`).then((data) => {
+      setHomePageData(data);
+    });
+  }, []);
+
+  const options = { next: { revalidate: 30 } };
+
+  const homeData = await client.fetch < SanityDocument[] > (`*[_type == "homePage"]`, {}, options);
+
   return (
     <div className="homeCont">
       <Nav />

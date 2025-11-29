@@ -5,7 +5,7 @@ import styles from "./styles.module.css"
 import Image from "next/image";
 import Link from "next/link";
 
-export default function HomeServices() {
+export default function HomeServices({ services }) {
     const [currentSegment, setCurrentSegment] = useState(0);
     const [direction, setDirection] = useState('next');
     const [prevSegment, setPrevSegment] = useState(0);
@@ -16,24 +16,11 @@ export default function HomeServices() {
     const intervalRef = useRef(null);
     const currentSegmentRef = useRef(0);
 
-    const segments = [
-        {
-            id: 1,
-            title: "Advanced Targeted Therapy",
-            image: "/homeService1.png"
-            
-        },
-        {
-            id: 2,
-            title: "Therapeutic Massage",
-            image: "/homeService2.png"
-        },
-        {
-            id: 3,
-            title: "Prenatal Massage",
-            image: "/homeService3.png"
-        }
-    ];
+    const segments = services?.map((service) => ({
+        id: service._key,
+        title: service.title,
+        image: service.image.asset.url
+    }));
 
     const resetInterval = () => {
         if (intervalRef.current) {
@@ -122,7 +109,7 @@ export default function HomeServices() {
                 clearInterval(intervalRef.current);
             }
         };
-    }, [segments.length]);
+    }, []);
 
     return (
         <div className={styles.servicesCont}>
@@ -157,7 +144,7 @@ export default function HomeServices() {
                         
                         return (
                             <div
-                                key={segment.id}
+                                key={segment.title}
                                 className={`${styles.carouselSegment} ${positionClass}`}
                             >
                                 <div className={styles.segmentContent}>

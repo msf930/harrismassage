@@ -63,7 +63,7 @@
     width: 50%;
     height: auto;
     background-color: var(--green);
-    padding: 50px 50px 50px 130px;
+    padding: 50px 50px 50px 150px;
     z-index: 99;
 }
 .aboutBackgroundText{
@@ -94,7 +94,7 @@
 .aboutApproachImageContInner{
     position: relative;
     width: 40vw;
-    height: 40vh;
+    height: 50vh;
 }
 .aboutApproachTextCont{
     position: absolute;
@@ -113,3 +113,24 @@
     font-family: var(--body);
     color: var(--dark-green);
 }
+.aboutServicesBtnCont{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutBtn{
+    position: relative;
+    font-size: 20px;
+    font-family: var(--body);
+    background-color: var(--dark-green);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    z-index: 110;
+  }
