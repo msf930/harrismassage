@@ -57,7 +57,7 @@ export default function About() {
                     const isEven = index % 2 === 0;
                     return (
                         <div
-                            key={section._key}
+                            key={index}
 
                         >
                             <div className={styles.aboutTitleCont}>

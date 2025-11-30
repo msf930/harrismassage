@@ -1,5 +1,5 @@
 import {defineField, defineType} from 'sanity'
-
+import {CropIcon} from '@sanity/icons'
 export const aboutSectionType = defineType({
   name: 'aboutSection',
   title: 'About Section',
@@ -13,8 +13,15 @@ export const aboutSectionType = defineType({
     defineField({
       name: 'image',
       type: 'image',
+      description: `Important: Crop using the crop icon in the top right corner  of the image and resize the image to a square.`,
       options: {
-        hotspot: true,
+        hotspot: {
+          previews: [
+            {title: 'Square', aspectRatio: 1 / 1},
+            
+          ]
+        }
+        
       },
       validation: (rule) => rule.required(),
     }),
