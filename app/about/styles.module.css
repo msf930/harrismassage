@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     height: auto;
-    min-height: 100vh;
+    min-height: 110vh;
     background-color: var(--tan);
     z-index: 1;
 }
