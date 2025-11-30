@@ -53,7 +53,7 @@ export default function Home() {
   useEffect(() => {
     const fetchHomePageData = async () => {
       const data = await client.fetch(HOME_PAGE_QUERY);
-      console.log(data);
+      
       setHomePageData(data);
     };
     fetchHomePageData();

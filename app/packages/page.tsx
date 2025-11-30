@@ -51,7 +51,7 @@ export default function Packages() {
   useEffect(() => {
     const fetchPackagesPageData = async () => {
       const data = await client.fetch(PACKAGES_PAGE_QUERY);
-      console.log(data);
+      // console.log(data);
       setPackagesPageData(data);
     };
     fetchPackagesPageData();

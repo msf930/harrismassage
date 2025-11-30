@@ -33,7 +33,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ id: string 
             try {
                 setLoading(true);
                 const data = await client.fetch(POST_QUERY);
-                console.log(data);
+                // console.log(data);
                 setPost(data);
             } catch (error) {
                 console.error('Error fetching post:', error);

@@ -7,7 +7,9 @@ export default function Contact() {
     return (
         <div className={styles.contactCont}>
             <Nav />
-            <ContactForm />
+            <div className={styles.contactInnerCont}>
+                <ContactForm />
+            </div>
             <Footer />
         </div>
     )

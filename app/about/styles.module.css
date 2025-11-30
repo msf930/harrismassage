@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     height: auto;
+    min-height: 100vh;
     background-color: var(--tan);
     z-index: 1;
 }
@@ -9,6 +10,7 @@
     position: relative;
     width: calc(100vw - 120px);
     height: auto;
+    min-height: 100vh;
     background-color: var(--dark-tan);
     display: flex;
     flex-direction: column;

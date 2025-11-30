@@ -5,3 +5,7 @@
     background-color: var(--tan);
     z-index: 1;
 }
+.contactInnerCont{
+    position: relative;
+   margin-top: 60px;
+}

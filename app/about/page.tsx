@@ -41,7 +41,7 @@ export default function About() {
     useEffect(() => {
         const fetchAboutPageData = async () => {
             const data = await client.fetch(ABOUT_PAGE_QUERY);
-            console.log(data);
+            
             setAboutPageData(data);
         };
         fetchAboutPageData();
