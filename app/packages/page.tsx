@@ -45,13 +45,12 @@ export default function Packages() {
         },
        
 }`
-  const options = { next: { revalidate: 30 } };
   const [packagesPageData, setPackagesPageData] = useState<SanityDocument[] | null>(null);
 
 
   useEffect(() => {
     const fetchPackagesPageData = async () => {
-      const data = await client.fetch(PACKAGES_PAGE_QUERY, {}, options);
+      const data = await client.fetch(PACKAGES_PAGE_QUERY);
       console.log(data);
       setPackagesPageData(data);
     };

@@ -136,24 +136,15 @@ export default function Home() {
           <h2 className="homeTestimonailsTitle">Testimonials</h2>
           <Image src="/heroTextVec.png" alt="line" width={298} height={15} />
           <div className="homeTestimonailsList">
-            <div className="homeTestimonailsItem">
-              <p className="homeTestimonailsItemDescription">
-                Ian does a great job. Understands the body and tailors the massage to your needs! Highly recommended
-              </p>
-              <p className="homeTestimonailsItemAuthor">Dennis S</p>
-            </div>
-            <div className="homeTestimonailsItem">
-              <p className="homeTestimonailsItemDescription">
-                Ian is always amazing. I have been seeing him for a very long time. I got into a car accident last week and Ian. Hes so good at knowing where to massage to relieve the stress and pain.
-              </p>
-              <p className="homeTestimonailsItemAuthor">Cindy L</p>
-            </div>
-            <div className="homeTestimonailsItem">
-              <p className="homeTestimonailsItemDescription">
-                Fantastic Therapist! Very knowledgeable and competent!
-              </p>
-              <p className="homeTestimonailsItemAuthor">Mike G</p>
-            </div>
+            {homePageData?.[0]?.testimonials?.length > 0 && (
+              homePageData?.[0]?.testimonials?.map((testimonial) => (
+                <div className="homeTestimonailsItem" key={testimonial.testimonial}>
+                  <p className="homeTestimonailsItemDescription">{testimonial.testimonial}</p>
+                  <p className="homeTestimonailsItemAuthor">{testimonial.author}</p>
+                </div>
+              ))
+            )}
+          
           </div>
         </div>
         <ContactForm />

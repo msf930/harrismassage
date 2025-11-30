@@ -35,13 +35,12 @@ export default function About() {
         },
        
       }`
-    const options = { next: { revalidate: 30 } };
     const [aboutPageData, setAboutPageData] = useState<SanityDocument[] | null>(null);
     
 
     useEffect(() => {
         const fetchAboutPageData = async () => {
-            const data = await client.fetch(ABOUT_PAGE_QUERY, {}, options);
+            const data = await client.fetch(ABOUT_PAGE_QUERY);
             console.log(data);
             setAboutPageData(data);
         };

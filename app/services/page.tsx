@@ -45,13 +45,12 @@ export default function Services() {
         },
        
 }`
-  const options = { next: { revalidate: 30 } };
   const [servicesPageData, setServicesPageData] = useState<SanityDocument[] | null>(null);
 
 
   useEffect(() => {
     const fetchServicesPageData = async () => {
-      const data = await client.fetch(SERVICES_PAGE_QUERY, {}, options);
+      const data = await client.fetch(SERVICES_PAGE_QUERY);
       console.log(data);
       setServicesPageData(data);
     };
