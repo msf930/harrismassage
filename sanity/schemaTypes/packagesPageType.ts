@@ -14,6 +14,11 @@ export const packagesPageType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'vagaroUrl',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
         name: 'packageSections',
         type: 'array',
         of: [{type: 'reference', to: [{type: 'packageSection'}]}]

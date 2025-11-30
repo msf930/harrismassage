@@ -1,0 +1,210 @@
+.blogCont{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--tan);
+    z-index: 100;
+}
+.blogInnerCont{
+    position: relative;
+    width: calc(100vw - 120px);
+    margin-left: 60px;
+    height: 100%;
+    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    z-index: 110;
+    background-color: var(--dark-tan);
+}
+.blogContentCont{
+    position: relative;
+    width: calc(100vw -  240px);
+    height: 100%;
+    margin-left: 60px;
+    
+    background-color: var(--tan);
+    padding: 40px;
+}
+.blogHeaderCont{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px;
+}
+.blogHeaderInfo{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.blogHeaderInfoItem{
+    font-size: 20px;
+    font-family: var(--title);
+    color: black;
+}
+.blogHeaderInfoItemSeparator{
+    font-size: 20px;
+    font-family: var(--title);
+    color: black;
+}
+.blogContentTitleCont{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+.blogContentTitle{
+    font-size: 42px;
+    font-family: var(--title);
+    color: black;
+}
+.blogHeaderExcerptCont{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.blogHeaderExcerpt{
+    font-size: 20px;
+    font-family: var(--title);
+    color: black;
+}
+.blogContentImageCont{
+    position: relative;
+    width: calc(100vw -  240px - 120px - 40px);
+    margin-left: 40px;
+    height: calc((100vw -  240px - 120px)*0.66);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.blogContentImage{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.blogContentBodyCont{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px;
+    font-family: var(--body);
+}
+
+/* PortableText Component Styles */
+.portableTextH1 {
+    font-size: 42px;
+    font-family: var(--title);
+    color: black;
+    margin: 30px 0 20px 0;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.portableTextH2 {
+    font-size: 36px;
+    font-family: var(--title);
+    color: black;
+    margin: 25px 0 15px 0;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.portableTextH3 {
+    font-size: 28px;
+    font-family: var(--title);
+    color: black;
+    margin: 20px 0 12px 0;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.portableTextH4 {
+    font-size: 24px;
+    font-family: var(--title);
+    color: black;
+    margin: 18px 0 10px 0;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.portableTextP {
+    font-size: 18px;
+    font-family: var(--body);
+    color: black;
+    line-height: 1.6;
+    margin: 12px 0;
+}
+
+.portableTextBlockquote {
+    font-size: 20px;
+    font-family: var(--body);
+    color: black;
+    border-left: 4px solid black;
+    padding-left: 20px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.portableTextStrong {
+    font-weight: bold;
+    color: black;
+}
+
+.portableTextEm {
+    font-style: italic;
+}
+
+.portableTextLink {
+    color: black;
+    text-decoration: underline;
+    transition: opacity 0.2s;
+}
+
+.portableTextLink:hover {
+    opacity: 0.7;
+}
+
+.portableTextUl,
+.portableTextOl {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.portableTextLi {
+    font-size: 18px;
+    font-family: var(--body);
+    color: black;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.portableTextImage {
+    position: relative;
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

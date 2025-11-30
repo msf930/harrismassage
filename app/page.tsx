@@ -8,7 +8,7 @@ import Link from "next/link";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import { PortableText } from "@portabletext/react";
-
+import { urlFor } from "../sanity/sanityImageUrl"
 import { type SanityDocument } from "next-sanity";
 import { client } from "../sanity/lib/client";
 import { useScroll, useTransform, motion } from "motion/react"
@@ -24,10 +24,13 @@ export default function Home() {
     services[]->{
       title,
       image{
+        _type,
+        crop,
+        hotspot,
         asset->{
           url
         }
-      }
+      },
     },
     conditions[]->{
       title,
@@ -46,7 +49,7 @@ export default function Home() {
   }`
   const [homePageData, setHomePageData] = useState<SanityDocument[] | null>(null);
   const heroRef = useRef<HTMLDivElement>(null);
- 
+
   useEffect(() => {
     const fetchHomePageData = async () => {
       const data = await client.fetch(HOME_PAGE_QUERY);
@@ -54,7 +57,7 @@ export default function Home() {
       setHomePageData(data);
     };
     fetchHomePageData();
-    
+
   }, []);
 
   // Track scroll progress for the hero section
@@ -66,9 +69,9 @@ export default function Home() {
   // Create parallax transform - image moves slower than scroll
   const imageY = useTransform(scrollYProgress, [0, 1], [0, 200]);
 
-  
- 
-  
+
+
+
   return (
     <div className="homeCont">
       <Nav />
@@ -78,7 +81,7 @@ export default function Home() {
           <div className="heroText">
             <div className="heroTextTitleCont">
               <h1 className="heroTextTitle">Harris Therapeutic Massage</h1>
-                <Image src="/heroTextVec.png" alt="line" width={397} height={15} />
+              <Image src="/heroTextVec.png" alt="line" width={397} height={15} />
             </div>
             <h2 className="heroTextSub">Integrative Pain Relief</h2>
             <Link href="/services" className="homeHeroBtn">
@@ -87,7 +90,7 @@ export default function Home() {
           </div>
           {homePageData?.[0]?.heroImage?.asset?.url && (
             <motion.div
-              style={{ 
+              style={{
                 y: imageY,
                 position: 'absolute',
                 top: 0,
@@ -96,13 +99,13 @@ export default function Home() {
                 height: '100%',
               }}
             >
-              <Image 
-                src={homePageData?.[0]?.heroImage?.asset?.url} 
-                alt="massage rocks" 
-                fill 
-                style={{ 
+              <Image
+                src={homePageData?.[0]?.heroImage?.asset?.url}
+                alt="massage rocks"
+                fill
+                style={{
                   objectFit: 'contain',
-                }} 
+                }}
               />
             </motion.div>
           )}

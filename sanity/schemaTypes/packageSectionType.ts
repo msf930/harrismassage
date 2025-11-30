@@ -12,7 +12,8 @@ export const packageSectionType = defineType({
     }),
     defineField({
       name: 'description',
-      type: 'text'
+      type: 'array',
+      of: [{type: 'block'}]
     }),
     defineField({
         name: 'packages',

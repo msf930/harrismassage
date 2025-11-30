@@ -13,6 +13,9 @@ export const aboutSectionType = defineType({
     defineField({
       name: 'image',
       type: 'image',
+      options: {
+        hotspot: true,
+      },
       validation: (rule) => rule.required(),
     }),
     defineField({

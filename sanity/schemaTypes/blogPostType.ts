@@ -32,6 +32,12 @@ export const blogPostType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'keywords',
+      type: 'array',
+      of: [{type: 'string'}],
+      
+    }),
+    defineField({
       name: 'image',
       type: 'image',
       validation: (rule) => rule.required(),
@@ -47,4 +53,18 @@ export const blogPostType = defineType({
       of: [{type: 'block'}]
     })
   ],
+  orderings: [
+    {
+      title: 'Date',
+      name: 'dateDesc',
+      by: [{field: 'date', direction: 'desc'}],
+    },
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'date',
+      media: 'image',
+    },
+  },
 })
