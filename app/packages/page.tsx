@@ -63,7 +63,11 @@ export default function Packages() {
 
   return (
     <div className={styles.packagesCont}>
-      <Nav />
+      <div className={styles.navCont}>
+
+        <Nav />
+        <div className={styles.navSpacer}></div>
+      </div>
       <div className={styles.packagesInnerCont}>
         {packagesPageData?.[0]?.packageSections.map((section, index) => {
           return (
@@ -103,8 +107,8 @@ export default function Packages() {
                                   <div className={styles.packagesPackagePriceBtnCont}>
                                     <Link href={packagesPageData?.[0]?.vagaroUrl} className={styles.packagesPackagePriceBtn}>Purchase</Link>
 
-                                    
-                                    
+
+
                                   </div>
                                 </div>
                               );

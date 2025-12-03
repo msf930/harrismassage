@@ -12,6 +12,7 @@ import { type SanityDocument } from "next-sanity";
 import { client } from "../../sanity/lib/client";
 import Link from "next/link";
 import DOMPurify from 'dompurify';
+import Script from "next/script";
 export default function Services() {
   const SERVICES_PAGE_QUERY = `*[_type == "servicesPage"]{
         
@@ -38,7 +39,8 @@ export default function Services() {
             },
             servicePrices[]->{
             durationInMinutes,
-            priceAmount
+            priceAmount,
+            vagaroUrl
             }
           },
           
@@ -63,7 +65,11 @@ export default function Services() {
 
   return (
     <div className={styles.servicesCont}>
-      <Nav />
+      <div className={styles.navCont}>
+
+        <Nav />
+        <div className={styles.navSpacer}></div>
+      </div>
       <div className={styles.servicesInnerCont}>
         {servicesPageData?.[0]?.serviceSections.map((section, index) => {
           return (
@@ -76,6 +82,13 @@ export default function Services() {
                 <div className={styles.servicesDescription}>
                   <PortableText value={section.description} />
                 </div>
+                <div className={styles.servicesServicePriceBtnCont}>
+                                    <Link href={servicesPageData?.[0]?.vagaroUrl} className={styles.servicesServicePriceBtn}>View all {section.title}</Link>
+
+
+                                   
+
+                                  </div>
                 <div className={styles.servicesServicesCont}>
                   {section.services.map((serviceItem, index) => {
                     const isEven = index % 2 === 0;
@@ -101,10 +114,11 @@ export default function Services() {
                                     : <p className={styles.servicesServicePriceDuration}>{priceItem.durationInMinutes} minutes</p>}
                                   <p className={styles.servicesServicePrice}>${priceItem.priceAmount}</p>
                                   <div className={styles.servicesServicePriceBtnCont}>
-                                    <Link href={servicesPageData?.[0]?.vagaroUrl} className={styles.servicesServicePriceBtn}>Book Now</Link>
+                                    <Link href={priceItem.vagaroUrl} className={styles.servicesServicePriceBtn}>Book Now</Link>
 
-                                    
-                                    
+
+                                   
+
                                   </div>
                                 </div>
                               );

@@ -59,10 +59,10 @@ export default function Blog() {
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            
+
             try {
-               
-               
+
+
                 // console.log(featured);
                 // Fetch paginated posts
                 const fetchedPosts = await client.fetch(getPostsQuery(currentPage));
@@ -79,7 +79,7 @@ export default function Blog() {
             } catch (error) {
                 console.error('Error fetching posts:', error);
             }
-            
+
             setLoading(false);
         };
 
@@ -95,7 +95,11 @@ export default function Blog() {
 
     return (
         <div className={styles.blogCont}>
-            <Nav />
+            <div className={styles.navCont}>
+
+                <Nav />
+                <div className={styles.navSpacer}></div>
+            </div>
             <div className={styles.blogInnerCont}>
                 <div className={styles.blogInnerInnerCont}>
                     <div className={styles.blogTitleCont}>
@@ -108,7 +112,7 @@ export default function Blog() {
                         ))}
                     </div>
                     <div className={styles.blogPaginationCont}>
-                    {totalPages > 1 && (
+                        {totalPages > 1 && (
                             <div className={styles.pagination}>
                                 <div className={styles.paginationInfo}>
                                     Page {currentPage} of {totalPages}
@@ -122,7 +126,7 @@ export default function Blog() {
                                             ← Previous
                                         </button>
                                     )}
-                                    
+
                                     <div className={styles.pageNumbers}>
                                         {(() => {
                                             if (currentPage === 1) {
@@ -161,7 +165,7 @@ export default function Blog() {
                                                     </button>,
                                                     <span key="ellipsis" className={styles.ellipsis}>...</span>
                                                 ];
-                                                
+
                                                 // Add previous page if on the last page
                                                 if (currentPage === totalPages && currentPage > 3) {
                                                     elements.push(
@@ -174,7 +178,7 @@ export default function Blog() {
                                                         </button>
                                                     );
                                                 }
-                                                
+
                                                 // Add current page
                                                 elements.push(
                                                     <button
@@ -185,7 +189,7 @@ export default function Blog() {
                                                         {currentPage}
                                                     </button>
                                                 );
-                                                
+
                                                 // Add next page if it exists and not on last page
                                                 if (currentPage + 1 <= totalPages) {
                                                     elements.push(
@@ -198,10 +202,10 @@ export default function Blog() {
                                                         </button>
                                                     );
                                                 }
-                                                
+
                                                 return elements;
                                             }
-                                            
+
                                             return null;
                                         })()}
                                     </div>

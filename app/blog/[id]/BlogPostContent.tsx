@@ -56,7 +56,11 @@ export default function BlogPostContent({ post, readingTime }: { post: any, read
     const formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
     return (
         <div className={styles.blogCont}>
-            <Nav />
+            <div className={styles.navCont}>
+
+                <Nav />
+                <div className={styles.navSpacer}></div>
+            </div>
             <div className={styles.blogInnerCont}>
                 <div className={styles.blogContentCont}>
                     <div className={styles.blogHeaderCont}>
@@ -68,9 +72,11 @@ export default function BlogPostContent({ post, readingTime }: { post: any, read
                         <div className={styles.blogContentTitleCont}>
                             <h1 className={styles.blogContentTitle}>{post.title}</h1>
                         </div>
-                        <div className={styles.blogHeaderExcerptCont}>
-                            <p className={styles.blogHeaderExcerpt}>{post.excerpt}</p>
-                        </div>
+                        {post.excerpt && (
+                            <div className={styles.blogHeaderExcerptCont}>
+                                <p className={styles.blogHeaderExcerpt}>{post.excerpt}</p>
+                            </div>
+                        )}
                     </div>
                     <div className={styles.blogContentImageCont}>
                         <Image src={urlFor(post.image).url()} alt={post.title} fill objectFit="contain" />

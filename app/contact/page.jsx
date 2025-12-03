@@ -6,7 +6,11 @@ import ContactForm from "../components/ContactForm";
 export default function Contact() {
     return (
         <div className={styles.contactCont}>
-            <Nav />
+            <div className={styles.navCont}>
+
+                <Nav />
+                <div className={styles.navSpacer}></div>
+            </div>
             <div className={styles.contactInnerCont}>
                 <ContactForm />
             </div>

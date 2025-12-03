@@ -29,7 +29,7 @@ export const blogPostType = defineType({
     defineField({
       name: 'excerpt',
       type: 'text',
-      validation: (rule) => rule.required(),
+      
     }),
     defineField({
       name: 'keywords',

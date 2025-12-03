@@ -16,6 +16,11 @@ export const servicePriceType = defineType({
       
       validation: (rule) => rule.required(),
     }),
+    defineField({
+      name: 'vagaroUrl',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
    
   ],
 })

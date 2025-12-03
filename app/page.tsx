@@ -12,6 +12,7 @@ import { urlFor } from "../sanity/sanityImageUrl"
 import { type SanityDocument } from "next-sanity";
 import { client } from "../sanity/lib/client";
 import { useScroll, useTransform, motion } from "motion/react"
+import Script from "next/script"
 
 export default function Home() {
 
@@ -75,13 +76,19 @@ export default function Home() {
   return (
     <div className="homeCont">
       <Nav />
-      {/* <div className="heroSpacer"></div> */}
+      <div className="heroSpacer"></div>
+      
       <div className="heroContFloat" ref={heroRef}>
         <div className="heroCont">
           <div className="heroText">
             <div className="heroTextTitleCont">
               <h1 className="heroTextTitle">Harris Therapeutic Massage</h1>
-              <Image src="/heroTextVec.png" alt="line" width={397} height={15} />
+              <div className="heroTextTitleLine">
+                <Image src="/heroTextVec.png" alt="line" width={397} height={15} />
+              </div>
+              <div className="heroTextTitleLineMobile">
+                <Image src="/heroTextVec.png" alt="line" width={260} height={15} />
+              </div>
             </div>
             <h2 className="heroTextSub">Integrative Pain Relief</h2>
             <Link href="/services" className="homeHeroBtn">
@@ -104,7 +111,7 @@ export default function Home() {
                 alt="massage rocks"
                 fill
                 style={{
-                  objectFit: 'contain',
+                  objectFit: 'cover',
                 }}
               />
             </motion.div>

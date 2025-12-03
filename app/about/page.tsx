@@ -50,7 +50,11 @@ export default function About() {
 
     return (
         <div className={styles.aboutCont}>
+            <div className={styles.navCont}>
+
             <Nav />
+            <div className={styles.navSpacer}></div>
+            </div>
             <div className={styles.aboutInnerCont}>
                 {aboutPageData?.[0]?.aboutSections.map((section, index) => {
                     const isEven = index % 2 === 0;

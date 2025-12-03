@@ -157,6 +157,9 @@ export default function HomeServices({ services }) {
                                     <div className={styles.segmentImageCont} style={{left: imageContPos + "%"}}>
                                         <Image src={segment.image} alt={segment.title} width={693} height={462} />
                                     </div>
+                                    <div className={styles.segmentImageMobileCont} >
+                                        <Image src={segment.image} alt={segment.title} width={300} height={200} />
+                                    </div>
                                 </div>
                             </div>
                         );

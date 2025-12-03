@@ -27,7 +27,9 @@ export default function BlogThumbnail({ post }) {
                 </div>
                 <div className={styles.blogThumbnailTextCont}>
                     <h3 className={styles.blogThumbnailTitle}>{post.title}</h3>
-                    <p className={styles.blogThumbnailDescription}>{post.excerpt}</p>
+                    {post.excerpt && (
+                        <p className={styles.blogThumbnailDescription}>{post.excerpt}</p>
+                    )}
                     <p className={styles.blogThumbnailDate}>{formattedDate}</p>
                     <p className={styles.blogThumbnailDate}>{readingTimeMinutes} min Read</p>
                 </div>
