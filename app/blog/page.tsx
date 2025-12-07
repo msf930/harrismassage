@@ -106,6 +106,10 @@ export default function Blog() {
                         <h1 className={styles.blogTitle}>Recent Posts</h1>
                         <Image src="/heroTextVec.png" alt="line" width={286} height={15} />
                     </div>
+                    <div className={styles.blogTitleContMobile}>
+                        <h1 className={styles.blogTitle}>Recent Posts</h1>
+                        <Image src="/heroTextVec.png" alt="line" width={146} height={15} />
+                    </div>
                     <div className={styles.blogPostsCont}>
                         {blogPageData?.map((post) => (
                             <BlogThumbnail key={post._id} post={post} />

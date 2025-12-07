@@ -1,3 +1,4 @@
+@media (min-width: 1000px) { 
 .aboutCont{
     position: relative;
     width: 100%;
@@ -50,6 +51,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.aboutTitleContMobile{
+    display: none;
 }
 .aboutBackgroundCont{
     position: relative;
@@ -155,3 +159,166 @@
     height: 60px;
     z-index: 110;
   }
+}
+@media (max-width: 1000px) { 
+    .aboutCont{
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 110vh;
+        background-color: var(--tan);
+        z-index: 1;
+    }
+    .navCont{
+        position: relative;
+        width: 100%;
+        height: 100px;
+        background-color: var(--green);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navSpacer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 300px;
+        width: 100%;
+        background-color: var(--green);
+        z-index: -1;
+      }
+    .aboutInnerCont{
+        position: relative;
+        width: 100vw;
+        height: auto;
+        min-height: 100vh;
+        background-color: var(--dark-tan);
+        display: flex;
+        flex-direction: column;
+        /* margin: 60px; */
+        padding-top: 0px;
+        z-index: 1;
+    }
+    .aboutTitle{
+        font-size: 26px;
+        font-family: var(--title);
+        color: var(--dark-green);
+    }
+    .aboutTitleCont{
+        display: none;
+    }
+    .aboutTitleContMobile{
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .aboutBackgroundCont{
+        position: relative;
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .aboutBackgroundImageCont{
+        position: absolute;
+        width: auto;
+        height: auto;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-60%);
+        height: auto;
+        z-index: 100;
+    }
+    .aboutBackgroundImageContInner{
+        position: relative;
+        width: 250px;
+        height: 250px;
+    }
+    .aboutBackgroundTextCont{
+        position: absolute;
+        top: 40%;
+        right: 0%;
+        max-width: 85vw;
+        /* transform: translateX(50%); */
+        width: 85vw;
+        height: auto;
+        background-color: var(--green);
+        padding: 100px 30px 30px 30px;
+        z-index: 99;
+    }
+    .aboutBackgroundText{
+        font-size: 13px;
+        font-family: var(--body);
+        color: var(--dark-green);
+    }
+    .aboutApproachCont{
+        position: relative;
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+    .aboutApproachImageCont{
+        position: absolute;
+        width: auto;
+        height: auto;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-30%);
+        height: auto;
+        z-index: 110;
+    }
+    .aboutApproachImageContInner{
+        position: relative;
+        width: 250px;
+        height: 250px;
+    }
+    .aboutApproachTextCont{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        max-width: 700px;
+        height: auto;
+        background-color: var(--green);
+        padding: 100px 30px 30px 30px;
+        z-index: 99;
+    }
+    .aboutApproachText{
+        font-size: 13px;
+        font-family: var(--body);
+        color: var(--dark-green);
+    }
+    .aboutServicesBtnCont{
+        position: relative;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .aboutBtn{
+        position: relative;
+        font-size: 20px;
+        font-family: var(--body);
+        background-color: var(--dark-green);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 60px;
+        z-index: 110;
+      }
+}

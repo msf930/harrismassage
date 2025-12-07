@@ -25,10 +25,10 @@ export default function BlogPostPageClient({ id }: BlogPostPageClientProps) {
             asset -> { _id, url} 
         }
     }`;
-    
+
     const [post, setPost] = useState<SanityDocument | null>(null);
     const [loading, setLoading] = useState(true);
-  
+
     useEffect(() => {
         const fetchPost = async () => {
             try {
@@ -43,7 +43,7 @@ export default function BlogPostPageClient({ id }: BlogPostPageClientProps) {
         };
         fetchPost();
     }, [id]);
-    
+
     // Calculate reading time
     let wordCount = 0;
     if (post?.content) {
@@ -63,10 +63,14 @@ export default function BlogPostPageClient({ id }: BlogPostPageClientProps) {
     if (loading) {
         return (
             <div className={styles.blogCont}>
-                <Nav/>
+                <div className={styles.navCont}>
+
+                    <Nav />
+                    <div className={styles.navSpacer}></div>
+                </div>
                 <div className={styles.blogInnerCont}>
                     <div className={styles.blogTitleCont}>
-                        <h1 className={styles.blogTitle}>Loading...</h1>
+                        <h1 className={styles.blogTitlePlaceholder}>Loading...</h1>
                     </div>
                 </div>
                 <Footer />
@@ -77,10 +81,14 @@ export default function BlogPostPageClient({ id }: BlogPostPageClientProps) {
     if (!post) {
         return (
             <div className={styles.blogCont}>
-                <Nav/>
+                <div className={styles.navCont}>
+
+                    <Nav />
+                    <div className={styles.navSpacer}></div>
+                </div>
                 <div className={styles.blogInnerCont}>
                     <div className={styles.blogTitleCont}>
-                        <h1 className={styles.blogTitle}>Post Not Found</h1>
+                        <h1 className={styles.blogTitlePlaceholder}>Post Not Found</h1>
                         <Image src="/heroTextVec.png" alt="line" width={286} height={15} />
                     </div>
                 </div>

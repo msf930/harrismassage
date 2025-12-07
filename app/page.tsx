@@ -123,8 +123,14 @@ export default function Home() {
           <HomeServices services={homePageData?.[0]?.services} />
         )}
         <div className="homeConditionsCont">
-          <h2 className="homeConditionsTitle">Conditions</h2>
-          <Image src="/heroTextVec.png" alt="line" width={226} height={15} />
+          <div className="homeConditionsTitleCont">
+            <h2 className="homeConditionsTitle">Conditions</h2>
+            <Image src="/heroTextVec.png" alt="line" width={226} height={15} />
+          </div>
+          <div className="homeConditionsTitleMobileCont">
+            <h2 className="homeConditionsTitle">Conditions</h2>
+            <Image src="/heroTextVec.png" alt="line" width={111} height={7} />
+          </div>
           <div className="homeConditionsList">
             {homePageData?.[0]?.conditions?.length > 0 && (
               homePageData?.[0]?.conditions?.map((condition) => (
@@ -140,8 +146,14 @@ export default function Home() {
           <Link href="/contact" className="homeHeroBtn">Contact Us</Link>
         </div>
         <div className="homeTestimonailsCont">
-          <h2 className="homeTestimonailsTitle">Testimonials</h2>
-          <Image src="/heroTextVec.png" alt="line" width={298} height={15} />
+          <div className="homeTestimonailsTitleCont">
+            <h2 className="homeTestimonailsTitle">Testimonials</h2>
+            <Image src="/heroTextVec.png" alt="line" width={298} height={15} />
+          </div>
+          <div className="homeTestimonailsTitleMobileCont">
+            <h2 className="homeTestimonailsTitle">Testimonials</h2>
+            <Image src="/heroTextVec.png" alt="line" width={149} height={7} />
+          </div>
           <div className="homeTestimonailsList">
             {homePageData?.[0]?.testimonials?.length > 0 && (
               homePageData?.[0]?.testimonials?.map((testimonial) => (

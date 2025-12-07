@@ -1,3 +1,4 @@
+@media (min-width: 640px) { 
 .contactFormCont {
     position: relative;
     width: calc(100vw - 120px);
@@ -42,6 +43,9 @@
     color: var(--dark-green);
     z-index: 150;
 }
+.titleContMobile{
+    display: none;
+}
 .contactFormForm{
     margin-top: 100px;
     max-width: 680px;
@@ -53,6 +57,9 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+}
+.contactFormForm > p{
+    font-size: 20px;
 }
 .contactFormFormInfo{
     width: 100%;
@@ -139,4 +146,160 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+}
+}
+@media (max-width: 640px) { 
+    .contactFormCont {
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        margin-left: 0px;
+        background-color: var(--dark-tan);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* padding: 40px; */
+    }
+    .contactFormInner{
+        position: relative;
+        width: calc(100vw - 34px);
+        height: 100%;
+        /* margin-left: 17px; */
+        margin-top: 120;
+        padding-top: 200px;
+        background-color: var(--tan);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+    }
+    .titleCont{
+        display: none;
+    }
+    .titleContMobile{
+        position: absolute;
+        top: calc(60px + (155px/2)) ;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 286px;
+        height: 126px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--green);
+        text-align: center;
+        font-size: 26px;
+        font-family: var(--title);
+        color: var(--dark-green);
+        z-index: 150;
+    }
+    .contactFormForm{
+        margin-top: 100px;
+        max-width: 680px;
+        height: auto;
+        color: var(--dark-green);
+        font-size: 20px;
+        font-family: var(--body);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    .contactFormForm > p{
+        font-size: 15px;
+    }
+    .contactFormFormInfo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        /* padding: 20px; */
+    }
+    .contactFormFormInfoItem{
+        font-size: 12px;
+        font-family: var(--body);
+        color: var(--dark-green);
+        text-align: center;
+    }
+    .nameSection{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+    .nameCont{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 15px;
+    }
+    
+    .formInput{
+        border-bottom: 1px solid black;
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        font-size: 14px;
+        font-family: var(--body);
+        color: var(--dark-green);
+        background-color: transparent;
+        
+    }
+    .formInput{
+        border-bottom: 1px solid black;
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        font-size: 16px;
+        font-family: var(--body);
+        color: var(--dark-green);
+        background-color: transparent;
+        
+    }
+    .formInputArea{
+        border-bottom: 1px solid black;
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        font-size: 16px;
+        font-family: var(--body);
+        color: var(--dark-green);
+        background-color: transparent;
+        
+    }
+    .contactFormFormBtnCont{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .contactFormFormBtn{
+        position: relative;
+      font-size: 20px;
+      font-family: var(--body);
+      background-color: var(--dark-green);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 60px;
+      z-index: 110;
+    }
+    .hCaptchaCont{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
 }

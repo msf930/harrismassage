@@ -15,7 +15,7 @@ export default function Footer() {
                     <p>11811 Upham St Unit J-1, Broomfield, CO 80020</p>
                 </div>
                 <div className={styles.footerCopyright}>
-                    <p>© 2025 Harris Therapeutic Massage powered by Serval Designs</p>
+                    <p><a href="/studio" target="_blank">©</a> 2025 Harris Therapeutic Massage powered by Serval Designs</p>
                 </div>
             </div>
         </div>

@@ -175,11 +175,11 @@ export default function Nav() {
                             </li>
                             <li>
                                 <Link
-                                    href="/projects"
-                                    className={pathname === "/projects" ? styles.navMenuLinkActive : styles.navMenuLink}
+                                    href="/packages"
+                                    className={pathname === "/packages" ? styles.navMenuLinkActive : styles.navMenuLink}
                                     onClick={handleShowNavbar}
                                 >
-                                    Projects
+                                    Packages
                                 </Link>
                             </li>
                             <li>

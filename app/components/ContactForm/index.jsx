@@ -14,6 +14,10 @@ export default function ContactForm() {
                 <h2 className={styles.contactFormTitle}>Contact Me</h2>
                 <Image src="/heroTextVec.png" alt="line" width={215} height={15} />
             </div>
+            <div className={styles.titleContMobile}>
+                <h2 className={styles.contactFormTitle}>Contact Me</h2>
+                <Image src="/heroTextVec.png" alt="line" width={146} height={15} />
+            </div>
             <div className={styles.contactFormInner} >
                 <form className={styles.contactFormForm} action="https://api.web3forms.com/submit" method="POST">
                     <div className={styles.contactFormFormInfo}>

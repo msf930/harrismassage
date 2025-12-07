@@ -67,6 +67,10 @@ export default function About() {
                                 <h1 className={styles.aboutTitle}>{section.title}</h1>
                                 <Image src="/heroTextVec.png" alt="line" width={286} height={15} />
                             </div>
+                            <div className={styles.aboutTitleContMobile}>
+                                <h1 className={styles.aboutTitle}>{section.title}</h1>
+                                <Image src="/heroTextVec.png" alt="line" width={176} height={15} />
+                            </div>
                             <div className={styles.aboutBackgroundCont}>
                                 <div className={isEven ? styles.aboutBackgroundImageCont : styles.aboutApproachImageCont}>
                                     <div className={isEven ? styles.aboutBackgroundImageContInner : styles.aboutApproachImageContInner}>
