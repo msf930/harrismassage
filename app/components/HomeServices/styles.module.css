@@ -327,7 +327,7 @@
     }
 
     .navButton:hover {
-        background-color: var(--green);
+        /* background-color: var(--green); */
         transform: scale(1.1);
     }
 
@@ -414,9 +414,9 @@
     .segmentImageMobileCont {
         position: absolute;
         top: 80%;
-        left: 50%;
+        left: calc(50%);
         transform: translate(-50%, -50%);
-        width: 100%;
+        width: 300px;
         height: 100%;
 
 

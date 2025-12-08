@@ -38,6 +38,13 @@ export const metadata = {
     icon: "/favicon.ico",
   },
   manifest: "/site.webmanifest",
+  themeColor: "#CFD6CD",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    themeColor: "#CFD6CD",
+  },
   robots: {
     index: true,
     follow: true,

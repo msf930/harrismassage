@@ -334,7 +334,7 @@
 
   .homeSecondCont {
     position: absolute;
-    top: calc(((100vw - 120px)/2) + 175px + 80px);
+    top: calc(((100vw - 120px)/2) + 175px );
   }
 
   .homeConditionsCont {
