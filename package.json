@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@hcaptcha/react-hcaptcha": "^1.14.0",
+    "@microsoft/clarity": "^1.0.2",
+    "@next/third-parties": "^16.0.8",
     "@portabletext/react": "^5.0.0",
     "@sanity/icons": "^3.7.4",
     "@sanity/image-url": "^1.2.0",

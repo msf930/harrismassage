@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono, Playfair_Display, Questrial } from "next/font/google";
 import "./globals.css";
+import Clarity from '@microsoft/clarity';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +35,7 @@ export const metadata = {
     title: "Harris Therapeutic Massage",
     description: "Harris Therapeutic Massage is a massage therapy practice in Broomfield, CO that offers a variety of massage services to help you relax and feel better.",
   },
-  
+
   icons: {
     icon: "/favicon.ico",
   },
@@ -56,16 +58,32 @@ export const metadata = {
   alternates: {
     canonical: "https://harrismassage.com",
   }
-  
+
 }
+
+const projectId = process.env.CLARITY_PROJECT_ID;
+
+Clarity.init(projectId);
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-M38XD371LV"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-M38XD371LV');
+        </script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${questrial.variable} antialiased`}
       >
         {children}
+        <GoogleAnalytics gaId="G-M38XD371LV" />
       </body>
     </html>
   );
