@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Playfair_Display, Questrial } from "next/font/google
 import "./globals.css";
 import Clarity from '@microsoft/clarity';
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -68,17 +69,7 @@ Clarity.init(projectId);
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-M38XD371LV"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-M38XD371LV');
-        </script>
-      </head>
+      <GoogleTagManager gtmId="G-M38XD371LV" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${questrial.variable} antialiased`}
       >
