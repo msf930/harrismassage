@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono, Playfair_Display, Questrial } from "next/font/google";
 import "./globals.css";
-import Clarity from '@microsoft/clarity';
+
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { GoogleTagManager } from '@next/third-parties/google'
 import MicrosoftClarity from "@/metrics/MicrosoftClarity";
@@ -63,9 +63,7 @@ export const metadata = {
 
 }
 
-const projectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
 
-Clarity.init(projectId);
 
 export default function RootLayout({ children }) {
   return (
