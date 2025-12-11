@@ -3,6 +3,7 @@ import "./globals.css";
 import Clarity from '@microsoft/clarity';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { GoogleTagManager } from '@next/third-parties/google'
+import MicrosoftClarity from "@/metrics/MicrosoftClarity";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -75,6 +76,7 @@ export default function RootLayout({ children }) {
       >
         {children}
         <GoogleAnalytics gaId="G-M38XD371LV" />
+        <MicrosoftClarity/>
       </body>
     </html>
   );
