@@ -62,7 +62,7 @@ export const metadata = {
 
 }
 
-const projectId = process.env.CLARITY_PROJECT_ID;
+const projectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
 
 Clarity.init(projectId);
 
